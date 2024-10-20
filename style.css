@@ -1,0 +1,118 @@
+/*body for all*/
+body{
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    align-items: center;
+    background-color: teal;
+}
+h1{
+    color: darkred;
+    text-align: left;
+}
+h2{
+    color: darkblue;
+    text-align: center;
+}
+script{
+    text-align: center;
+}
+main{
+    display: block;
+}
+
+/*search form*/
+form{
+    text-align: center;
+    padding: 20px;
+    background-color: none;
+    input{
+        width: 300px;
+        padding: 10px;
+        border: 2px solid;
+    }
+    button{
+        padding: 10px 15px;
+        background-color: darkred;
+        cursor: pointer;
+    }
+}
+
+/* Styles for the image-box and the image inside it */
+.image-box {
+    max-width: 100%;
+    text-align: center;
+    margin: 15px;
+    margin-bottom: 50px;
+}
+
+.image-box img {
+    max-width: 100%;  /* Ensures the image never exceeds the container width */
+    width: 85%;       /* Set width to 85% of the container */
+    max-height: 500px; /* Set a maximum height for the image */
+    height: auto;     /* Maintain aspect ratio */
+    object-fit: cover; /* Ensures the image fits the box without stretching */
+    margin: 15px auto;
+    display: block;
+}
+
+.image-box button {
+    max-width: 100%;  /* Ensures the button never exceeds the container width */
+    width: 85%;       /* Set width to 85% of the container */
+    margin: 15px auto;
+    padding: 15px;
+    font-size: 16px;
+    border: none;
+    background-color: darkblue;
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+    
+}
+
+/* Media query for tablets and smaller screens (max-width: 768px) */
+@media (max-width: 768px) {
+    .image-box img,
+    .image-box button {
+        width: 85%;  /* Slightly smaller width for both image and button on tablets */
+        margin: 10px auto;
+    }
+
+    .image-box img {
+        max-height: 300px; /* Reduce max height on smaller screens */
+    }
+
+    button {
+        font-size: 14px;
+        padding: 12px;
+    }
+}
+
+/* Media query for very small screens (max-width: 480px) */
+@media (max-width: 480px) {
+    .image-box img,
+    .image-box button {
+        width: 100%; /* Full width for both image and button on mobile */
+        margin: 5px auto;
+    }
+
+    .image-box img {
+        max-height: 200px; /* Further reduce max height for mobile */
+    }
+
+    button {
+        font-size: 12px;
+        padding: 10px;
+    }
+}
+
+/* Media query for desktop (min-width: 1024px) */
+@media (min-width: 1024px) {
+    .image-box img,
+    .image-box button {
+        width: 150vh; /* Set width to 150% of the viewport height */
+        margin: 15px auto;
+    }
+
+    .image-box img {
+        max-height: 80vh; /* Set a height relative to the viewport on desktop */
+    }
+}
